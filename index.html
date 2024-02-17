@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link href = "style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="buttons">
+        <button class="button" id="random-color">Random Color</button>
+        <button class="button" id="clear-button">Clear</button>
+        <div class="slider-box">
+            <input type="range" min="1" max="100" value = '50' class="slider">
+            <p style="font-size: 22px; color: white;" id="size-text">Size of Grid (1-100) : 50 x 50</p>
+        </div>
+    </div>
+
+
+    <div class="full-game-layout">
+        <div class="main-body">
+            <div class="title">
+                <p style="color: gold; font-size: 30px; font-family: cursive">Etch-a-Sketch</p>
+            </div>
+
+            <div class="main-screen">
+
+            </div>
+
+            <div class="two-circles-at-bottom">
+                <span class="circle" id="left-circle"></span>
+                <span class="circle"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

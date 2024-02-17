@@ -1,0 +1,86 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    background-color:rgb(40,144,73);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.button{
+    height: 70px;
+    width: 180px;
+    font-size: 20px;
+    border-radius: 30px;
+    border: solid black 2px;
+}
+
+#random-color{
+    color: aliceblue;
+    font-size: 20px;
+    background-image: linear-gradient(red,orange, yellow, green, blue, indigo, violet);
+}
+
+.slider{
+    -webkit-appearance: none;
+    border-radius: 40px;
+    width: 180px;
+    height: 16px;
+    outline: black;
+}
+
+
+.full-game-layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    height: 700px;
+    width: 700px;
+    border-radius: 20px;
+}
+
+.main-body{
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    width: 650px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.main-screen{
+    display: flex;
+    align-self: center;
+    height: 550px;
+    width: 550px;
+    background-color: aliceblue;
+}
+
+.two-circles-at-bottom{
+    display: flex;
+    margin-top: 20px;
+    height: 80px;
+}
+
+.circle{
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+#left-circle{
+    display: flex;
+    margin-right: auto;
+}
