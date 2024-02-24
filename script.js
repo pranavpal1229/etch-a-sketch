@@ -1,7 +1,12 @@
 let slider = document.querySelector('.slider')
 let size_text = document.querySelector('#size-text')
 let clear_button = document.querySelector('#clear-button')
+let random_color = document.querySelector("#random-color")
 let color = 'black'
+let randomColor = false
+
+random_color.onclick = generateColor
+
 createBoard(slider.value)
 clear_button.onclick = function(){
     clearBoard()
@@ -27,7 +32,10 @@ function clearBoard(){
 function createBoard(size){
     let board = document.querySelector(".main-screen")
     let squareSize = Number(550/size)
-    console.log(squareSize)
+    
+    // Remove existing grid elements
+    board.innerHTML = ''
+
     for(let i = 0; i < 550; i += squareSize){
         let column = document.createElement('div')
         column.style.width = `${squareSize}px`
@@ -44,9 +52,14 @@ function createBoard(size){
         }
         board.appendChild(column)
     }
-    
 }
 
-
+function generateColor(){
+    if(randomColor == false){
+        color = "pink"
+        randomColor = true
+    }
+    else{color = "black"}
+}
 
 
