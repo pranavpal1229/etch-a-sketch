@@ -1,13 +1,15 @@
 let slider = document.querySelector('.slider')
 let size_text = document.querySelector('#size-text')
 let clear_button = document.querySelector('#clear-button')
-initialBoard()
+let color = 'black'
+createBoard(slider.value)
 clear_button.onclick = function(){
     clearBoard()
 }
 size_text.innerHTML = `Grid Size: ${slider.value} x ${slider.value}`
 slider.oninput = function(){
     clearBoard()
+    createBoard(slider.value)
     size_text.innerHTML = `Grid Size: ${slider.value} x ${slider.value}`
 }
 
@@ -22,12 +24,9 @@ function clearBoard(){
 
 
 
-
-
-
-function initialBoard(){
+function createBoard(size){
     let board = document.querySelector(".main-screen")
-    let squareSize = Number(550/slider.value)
+    let squareSize = Number(550/size)
     console.log(squareSize)
     for(let i = 0; i < 550; i += squareSize){
         let column = document.createElement('div')
@@ -39,7 +38,7 @@ function initialBoard(){
             row_piece.style.height = `${squareSize}px`
             row_piece.className = 'piece'
             row_piece.addEventListener("mouseover", function(){
-                row_piece.style.backgroundColor = 'black'
+                row_piece.style.backgroundColor = color
             })
             column.appendChild(row_piece)
         }
@@ -47,5 +46,7 @@ function initialBoard(){
     }
     
 }
+
+
 
 
