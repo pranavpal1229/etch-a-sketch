@@ -1,6 +1,10 @@
 let slider = document.querySelector('.slider')
 let size_text = document.querySelector('#size-text')
+let clear_button = document.querySelector('#clear-button')
 initialBoard()
+clear_button.onclick = function(){
+    clearBoard()
+}
 size_text.innerHTML = `Grid Size: ${slider.value} x ${slider.value}`
 slider.oninput = function(){
     clearBoard()
@@ -12,7 +16,7 @@ slider.oninput = function(){
 function clearBoard(){
     list_of_pieces = Array.from(document.getElementsByClassName('piece'))
     list_of_pieces.forEach(element => {
-        element.backgroundColor = 'white'
+        element.style.backgroundColor = 'white'
     });
 }
 
